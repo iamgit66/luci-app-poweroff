@@ -6,7 +6,7 @@ function index()
 end
 
 function action_poweroff()
-luci.util.exec("docker stop $(docker ps -aq)")
-luci.util.exe("sync")
+luci.util.exec("/usr/bin/docker $(docker ps -aq)")
+luci.util.exec("/bin/sync")
 luci.util.exec("/sbin/poweroff")
 end
